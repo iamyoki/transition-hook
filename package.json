@@ -1,6 +1,6 @@
 {
   "name": "transition-hook",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -20,7 +20,8 @@
     "clean": "rimraf dist",
     "build": "yarn clean && run-p build:*",
     "watch": "yarn clean && run-p 'build:* -- --watch'",
-    "lint": "eslint src --fix"
+    "lint": "eslint src --fix",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": "^16.8.0  || ^17.0.0",
@@ -29,6 +30,8 @@
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@types/react": "^17.0.37",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
@@ -39,7 +42,12 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
+    "semantic-release": "^18.0.1",
     "semantic-release-cli": "^5.4.4",
     "typescript": "^4.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamyoki/transition-hook.git"
   }
 }
