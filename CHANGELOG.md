@@ -1,3 +1,20 @@
+## [1.1.0](https://github.com/iamyoki/transition-hook/compare/v1.0.0...v1.1.0) (2021-12-16)
+
+
+### Features
+
+* almost finished useTransition and Transition ([a540689](https://github.com/iamyoki/transition-hook/commit/a540689c7fde0355bb1f859f448e53eb537e0125))
+
+
+### Chores
+
+* update release config ([9553a82](https://github.com/iamyoki/transition-hook/commit/9553a82235cd0641931cb48c6b38a5440f8d7030))
+
+
+### Docs
+
+* add readme ([4dcddc4](https://github.com/iamyoki/transition-hook/commit/4dcddc4b13c38fdd96d4cfcfdb5576ba36551c8d))
+
 ## 1.0.0 (2021-12-16)
 
 
