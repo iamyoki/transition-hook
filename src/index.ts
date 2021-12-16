@@ -1,7 +1,2 @@
-import {useState} from 'react';
-
-export function useTransition() {
-  const [num, setNum] = useState(0);
-
-  return [num, setNum];
-}
+console.log('init project for npm package register');
+export {};
