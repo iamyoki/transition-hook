@@ -60,7 +60,12 @@ const config = {
         },
       },
     ],
-    '@semantic-release/changelog',
+    [
+      '@semantic-release/changelog',
+      {
+        changelogFile: 'CHANGELOG.md',
+      },
+    ],
     '@semantic-release/github',
     '@semantic-release/npm',
     [
