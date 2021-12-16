@@ -1,0 +1,37 @@
+{
+  "name": "transition-hook",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "Yoki Yu <yokiyuqian@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "📦 --- Builds": "",
+    "build:cjs": "tsc -p .",
+    "build:esm": "tsc -p . --module esnext --outDir dist/esm",
+    "build:types": "tsc -p . -d --emitDeclarationOnly --outDir dist/types",
+    "🌟 --- Mains": "",
+    "clean": "rimraf dist",
+    "build": "yarn clean && run-p build:*",
+    "watch": "yarn clean && run-p 'build:* -- --watch'"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4"
+  }
+}
