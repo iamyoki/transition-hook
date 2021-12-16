@@ -60,6 +60,7 @@ const config = {
         },
       },
     ],
+    '@semantic-release/changelog',
     '@semantic-release/github',
     '@semantic-release/npm',
     [
@@ -68,12 +69,6 @@ const config = {
         message:
           // eslint-disable-next-line no-template-curly-in-string
           'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
-      },
-    ],
-    [
-      '@semantic-release/changelog',
-      {
-        changelogFile: 'CHANGELOG.md',
       },
     ],
   ],
