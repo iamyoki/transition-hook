@@ -1,0 +1,39 @@
+name: 🚀 Release The Package
+on:
+  workflow_run:
+    workflows:
+      - "🧪 Run Tests"
+    branches: [main]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    strategy:
+      matrix:
+        node-version:
+          - 14.x
+          - 16.x
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+      - run: yarn build
+      - name: 🚀 Release
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        run: yarn semantic-release
+
+  failed:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo '❌ Release has canceled due to tests fail.'
