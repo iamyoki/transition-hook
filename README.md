@@ -5,7 +5,7 @@
   <a href="https://github.com/iamyoki/transition-hook/actions/workflows/release.yml"><img src="https://github.com/iamyoki/transition-hook/actions/workflows/release.yml/badge.svg" alt="🚀 Release The Package"></a>
 </p>
 
-<p align="center">An extreme light-wright react transition animation hook which is simpler and easier to use than react-transition-group</p>
+<p align="center">An extreme light-wright react transition animation hook which is simpler and easier to use than <a href="http://reactcommunity.org/react-transition-group">react-transition-group</a></p>
 
 ## Installation
 
