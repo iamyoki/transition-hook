@@ -1,5 +1,7 @@
-const a: string = 'hello';
+import {useState} from 'react';
 
-console.log(a)
+export function useTransition() {
+  const [num, setNum] = useState(0);
 
-export {a};
+  return [num, setNum];
+}
