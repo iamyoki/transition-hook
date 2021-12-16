@@ -6,6 +6,13 @@
 </p>
 
 <p align="center">An extreme light-wright react transition animation hook which is simpler and easier to use than <a href="http://reactcommunity.org/react-transition-group">react-transition-group</a></p>
+<br>
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [useTransition](#usetransition)
+  - [Transition](#transition)
+- [License](#license)
 
 ## Installation
 
