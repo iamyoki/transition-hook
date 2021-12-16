@@ -1,5 +1,5 @@
 /** @type {import('semantic-release').Options} */
-const release = {
+const config = {
   branches: 'main',
   plugins: [
     [
@@ -60,14 +60,9 @@ const release = {
         },
       },
     ],
-    '@semantic-release/npm',
+    '@semantic-release/changelog',
     '@semantic-release/github',
-    [
-      '@semantic-release/changelog',
-      {
-        changelogFile: 'CHANGELOG.md',
-      },
-    ],
+    '@semantic-release/npm',
     [
       '@semantic-release/git',
       {
@@ -79,4 +74,4 @@ const release = {
   ],
 };
 
-module.exports = release;
+module.exports = config;
