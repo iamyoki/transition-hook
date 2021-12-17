@@ -12,6 +12,9 @@
 - [Usage](#usage)
   - [useTransition](#usetransition)
   - [Transition](#transition)
+- [API Reference](#api-reference)
+  - [useTransition(state, timeout)](#usetransitionstate-timeout)
+  - [Transition](#transition-1)
 - [License](#license)
 
 ## Installation
@@ -32,6 +35,8 @@ npm install transition-hook --save
 
 ### useTransition
 
+This hook transform a boolean state into transition stage('from' | 'enter' | 'leave'), and unmount the component after timeout.
+
 ```jsx
 const [onOff, setOnOff] = useState(true)
 const {stage, shouldMount} = useTransition(onOff, 300) // (state, timeout)
@@ -51,6 +56,8 @@ return <div>
 
 ### Transition
 
+If you prefer FaCC pattern usage, there it is!
+
 ```jsx
 const [onOff, setOnOff] = useState(true)
 
@@ -68,6 +75,38 @@ return <div>
   </Transition>
 </div>
 ```
+
+## API Reference
+
+### useTransition(state, timeout)
+
+```js
+  const {stage, shouldMount} = useTransition(onOff, 300)
+```
+
+| Parameters | Type      | Description                                                           |
+| :--------- | :-------- | :-------------------------------------------------------------------- |
+| `state`    | `boolean` | **Required**. Your boolean state, which controls animation in and out |
+| `timeout`  | `number`  | **Required**. How long before the animation ends and unmounts         |
+
+| Returns       | Type                                | Description                                         |
+| :------------ | :---------------------------------- | :-------------------------------------------------- |
+| `stage`       | Stage: `from` \| `enter` \| `leave` | Use three different stage to perform your animation |
+| `shouldMount` | `boolean`                           | Whether the component should be mounted             |
+
+### Transition
+
+```jsx
+  <Transition state={onOff} timeout={300}>
+    {(stage, shouldMount) => shouldMount && <div style={...}>hello</div>}
+  </Transition>
+```
+
+| Props      | Type                                                    | Description                                                           |
+| :--------- | :------------------------------------------------------ | :-------------------------------------------------------------------- |
+| `state`    | `boolean`                                               | **Required**. Your boolean state, which controls animation in and out |
+| `timeout`  | `number`                                                | **Required**. How long before the animation ends and unmounts         |
+| `children` | `(stage: Stage, shouldMount: boolean)=>React.ReactNode` | **Required**. FaCC pattern.                                           |
 
 ## License
 
