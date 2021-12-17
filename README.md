@@ -89,6 +89,8 @@ return <div>
 | `state`    | `boolean` | **Required**. Your boolean state, which controls animation in and out |
 | `timeout`  | `number`  | **Required**. How long before the animation ends and unmounts         |
 
+<br>
+
 | Returns       | Type                                | Description                                         |
 | :------------ | :---------------------------------- | :-------------------------------------------------- |
 | `stage`       | Stage: `from` \| `enter` \| `leave` | Use three different stage to perform your animation |
