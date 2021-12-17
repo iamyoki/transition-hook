@@ -1,3 +1,16 @@
+### [1.1.1](https://github.com/iamyoki/transition-hook/compare/v1.1.0...v1.1.1) (2021-12-16)
+
+
+### Docs
+
+* update readme ([ebe52b1](https://github.com/iamyoki/transition-hook/commit/ebe52b15f82a89e075403e22cd63c3e7c1b5af7c))
+* update readme, add table of contents ([10b6168](https://github.com/iamyoki/transition-hook/commit/10b616870516b510af1e8bcbfbf5802c1fadd21c))
+
+
+### Chores
+
+* add keywords in package.json ([300eb40](https://github.com/iamyoki/transition-hook/commit/300eb4039f9bd98c12174ca5f2674c9a82749b67))
+
 ## [1.1.0](https://github.com/iamyoki/transition-hook/compare/v1.0.0...v1.1.0) (2021-12-16)
 
 
