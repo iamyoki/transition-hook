@@ -3,9 +3,15 @@
 <p align="center">
   <a href="https://github.com/iamyoki/transition-hook/actions/workflows/test.yml"><img src="https://github.com/iamyoki/transition-hook/actions/workflows/test.yml/badge.svg" alt="🧪 Run Tests"></a>
   <a href="https://github.com/iamyoki/transition-hook/actions/workflows/release.yml"><img src="https://github.com/iamyoki/transition-hook/actions/workflows/release.yml/badge.svg" alt="🚀 Release The Package"></a>
+  <a href="https://github.com/iamyoki/transition-hook">
+    <img src="https://img.shields.io/bundlephobia/minzip/transition-hook?color=%237B68EE&label=Minizipped%20Size" alt="transition hook">
+  </a>
+  <a href="https://github.com/iamyoki/transition-hook">
+    <img src="https://img.shields.io/github/license/iamyoki/transition-hook?color=Turquoise" alt="">
+  </a>
 </p>
 
-<p align="center">An extreme light-weight react transition animation hook which is simpler and easier to use than <a href="http://reactcommunity.org/react-transition-group">react-transition-group</a></p>
+<p align="center">An extreme light-weight<strong>(0.4kb)</strong> react transition animation hook which is simpler and easier to use than <a href="http://reactcommunity.org/react-transition-group">react-transition-group</a></p>
 <br>
 
 <p align="center">
