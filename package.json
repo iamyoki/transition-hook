@@ -9,7 +9,7 @@
     "dist"
   ],
   "author": "Yoki Yu <yokiyuqian@gmail.com>",
-  "description": "An extreme light-wright react transition animation hook which is simpler and easier to use than react-transition-group",
+  "description": "An extreme light-weight react transition animation hook which is simpler and easier to use than react-transition-group",
   "keywords": [
     "react",
     "transition",
