@@ -1,3 +1,10 @@
+### [1.1.6](https://github.com/iamyoki/transition-hook/compare/v1.1.5...v1.1.6) (2021-12-17)
+
+
+### Docs
+
+* fix href ([a60b61e](https://github.com/iamyoki/transition-hook/commit/a60b61e8bc3c4fa73196a4340210216db498a799))
+
 ### [1.1.5](https://github.com/iamyoki/transition-hook/compare/v1.1.4...v1.1.5) (2021-12-17)
 
 
