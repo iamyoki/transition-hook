@@ -1,3 +1,10 @@
+### [1.1.5](https://github.com/iamyoki/transition-hook/compare/v1.1.4...v1.1.5) (2021-12-17)
+
+
+### Docs
+
+* update badge ([7f14f22](https://github.com/iamyoki/transition-hook/commit/7f14f2231c3c2641dfdf3c6bc8433f94af214088))
+
 ### [1.1.4](https://github.com/iamyoki/transition-hook/compare/v1.1.3...v1.1.4) (2021-12-17)
 
 
