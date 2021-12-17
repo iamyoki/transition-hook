@@ -8,6 +8,16 @@
 <p align="center">An extreme light-weight react transition animation hook which is simpler and easier to use than <a href="http://reactcommunity.org/react-transition-group">react-transition-group</a></p>
 <br>
 
+<p align="center">
+  <a href="https://tqgdj.csb.app/">
+    <img src="./example.gif" width="400" alt="example">
+  </a>
+  <br>
+  <a href="">See Example</a> |
+  <a href="https://codesandbox.io/s/transition-hook-example-tqgdj">See Example in Codesandbox</a>
+</p>
+<br>
+
 - [Installation](#installation)
 - [Usage](#usage)
   - [useTransition](#usetransition)
