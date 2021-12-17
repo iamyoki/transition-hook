@@ -1,3 +1,10 @@
+### [1.1.2](https://github.com/iamyoki/transition-hook/compare/v1.1.1...v1.1.2) (2021-12-17)
+
+
+### Bug Fixes
+
+* wrong word ([eb8b133](https://github.com/iamyoki/transition-hook/commit/eb8b133d585dfdd6c56633e0e32c0281b089fdbc))
+
 ### [1.1.1](https://github.com/iamyoki/transition-hook/compare/v1.1.0...v1.1.1) (2021-12-16)
 
 
