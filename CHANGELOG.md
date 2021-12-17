@@ -1,3 +1,11 @@
+### [1.1.4](https://github.com/iamyoki/transition-hook/compare/v1.1.3...v1.1.4) (2021-12-17)
+
+
+### Docs
+
+* update readme ([437c3e2](https://github.com/iamyoki/transition-hook/commit/437c3e2affa9eb7163ff928ebb3be9987e2ba5d2))
+* update readme, add gif ([87c433a](https://github.com/iamyoki/transition-hook/commit/87c433ade6b87e7ca6a8dea88a9e0be2603dd07f))
+
 ### [1.1.3](https://github.com/iamyoki/transition-hook/compare/v1.1.2...v1.1.3) (2021-12-17)
 
 
