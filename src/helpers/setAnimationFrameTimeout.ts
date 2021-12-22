@@ -1,4 +1,4 @@
-type Canceller = {
+export type Canceller = {
   id?: number;
 };
 
