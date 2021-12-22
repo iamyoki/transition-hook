@@ -1,3 +1,17 @@
+## [1.2.0](https://github.com/iamyoki/transition-hook/compare/v1.1.6...v1.2.0) (2021-12-22)
+
+
+### Features
+
+* add useSwitchTransition ([262e720](https://github.com/iamyoki/transition-hook/commit/262e7207f0154a60117c95f1415ac7f16e1086c3)), closes [#3](https://github.com/iamyoki/transition-hook/issues/3) [#1](https://github.com/iamyoki/transition-hook/issues/1)
+* refactor folder structure, add setAnimationFrameTimeout ([6b2fda1](https://github.com/iamyoki/transition-hook/commit/6b2fda1fcad1c551583af6f5c6e4861e4468c73f))
+* useTransition replace timeout with animationFrameTimeout ([c59c662](https://github.com/iamyoki/transition-hook/commit/c59c662ecb5b1d91242e0c09c6f9ab7f414d59af))
+
+
+### Chores
+
+* change commitlint rules ([d10fa20](https://github.com/iamyoki/transition-hook/commit/d10fa2023c86180fe3f2aa0f50c6b93f553f90da))
+
 ### [1.1.6](https://github.com/iamyoki/transition-hook/compare/v1.1.5...v1.1.6) (2021-12-17)
 
 
