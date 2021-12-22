@@ -15,7 +15,6 @@ export function useDefaultMode<S>({
 
     // skip fist mount and any unchanged effect 🚫
     const [lastItem] = list.slice(-1);
-    console.log(lastItem.state, state, 'default');
     if (lastItem.state === state) return;
 
     // 0 update key
