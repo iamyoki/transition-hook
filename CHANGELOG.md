@@ -1,3 +1,10 @@
+### [1.2.1](https://github.com/iamyoki/transition-hook/compare/v1.2.0...v1.2.1) (2021-12-22)
+
+
+### Docs
+
+* update readme, add useSwitchTransition doc, add more examples ([702d098](https://github.com/iamyoki/transition-hook/commit/702d098cac35ecd4839f33a67b4e3b57f15b35e4))
+
 ## [1.2.0](https://github.com/iamyoki/transition-hook/compare/v1.1.6...v1.2.0) (2021-12-22)
 
 
