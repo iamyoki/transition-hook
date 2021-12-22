@@ -1,4 +1,4 @@
-import {Stage, useTransition} from './useTransition';
+import {Stage, useTransition} from '../useTransition';
 
 type TransitionProps = {
   state: boolean;
