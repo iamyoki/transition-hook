@@ -22,22 +22,28 @@
   <a href="https://tqgdj.csb.app/">See Example</a> |
   <a href="https://codesandbox.io/s/transition-hook-example-tqgdj">See Example in Codesandbox</a>
 </p>
+
 <p align="center">
-  <a href="https://o3f41.csb.app/basic">
-    <img src="./gifs/basic.gif" height="150" alt="example">
+  <a href="https://o3f41.csb.app/ripple-effect">
+    <img src="./gifs/ripple-effect.gif" height="150" alt="example">
   </a>
   <a href="https://o3f41.csb.app/emoji-switch-transition">
     <img src="./gifs/emoji-switch-transition.gif" height="150" alt="example">
   </a>
 </p>
+
 <p align="center">
+  <a href="https://o3f41.csb.app/basic">
+    <img src="./gifs/basic.gif" height="150" alt="example">
+  </a>
   <a href="https://o3f41.csb.app/basic-switch-transition">
-    <img src="./gifs/basic-switch-transition.gif" height="200" alt="example">
+    <img src="./gifs/basic-switch-transition.gif" height="150" alt="example">
   </a>
   <a href="https://o3f41.csb.app/transition-with-key">
-    <img src="./gifs/transition-with-key.gif" height="200" alt="example">
+    <img src="./gifs/transition-with-key.gif" height="150" alt="example">
   </a>
 </p>
+
 <p align="center">
   <a href="https://codesandbox.io/s/transition-hook-examples-o3f41">See More Examples in Codesandbox</a>
 </p>
