@@ -1,3 +1,10 @@
+### [1.3.2](https://github.com/iamyoki/transition-hook/compare/v1.3.1...v1.3.2) (2021-12-23)
+
+
+### Docs
+
+* add painter gif example ([1698fce](https://github.com/iamyoki/transition-hook/commit/1698fcebdfe23076ceca8a40573cf0c310dff91d))
+
 ### [1.3.1](https://github.com/iamyoki/transition-hook/compare/v1.3.0...v1.3.1) (2021-12-23)
 
 
