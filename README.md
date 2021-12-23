@@ -48,10 +48,12 @@
   - [useTransition](#usetransition)
   - [useSwitchTransition](#useswitchtransition)
   - [Transition](#transition)
+  - [SwitchTransition](#switchtransition)
 - [API Reference](#api-reference)
   - [useTransition(state, timeout)](#usetransitionstate-timeout)
   - [useSwitchTransition(state, timeout, mode)](#useswitchtransitionstate-timeout-mode)
   - [Transition](#transition-1)
+  - [SwitchTransition](#switchtransition-1)
 - [License](#license)
 
 ## Installation
@@ -137,6 +139,29 @@ return <div>
 </div>
 ```
 
+### SwitchTransition
+
+FaCC pattern version of useSwitchTransition
+
+```jsx
+  <SwitchTransition state={count} timeout={300} mode='default'>
+    {(state, stage) => (
+      <h1
+        style={{
+          transition: '.3s',
+          opacity: stage === 'enter' ? 1 : 0,
+          transform: {
+            from: 'translateX(-100%) scale(1.2)',
+            enter: 'translateX(0)',
+            leave: 'translateX(100%) scale(0)'
+          }[stage]
+        }}>
+        {state} {stage} hello
+      </h1>
+    )}
+  </SwitchTransition>
+```
+
 ## API Reference
 
 ### useTransition(state, timeout)
@@ -163,17 +188,17 @@ return <div>
   const transition = useSwitchTransition(onOff, 300, 'default')
 ```
 
-| Parameters | Type                               | Description                                                   |
-| :--------- | :--------------------------------- | :------------------------------------------------------------ |
-| `state`    | `any`                              | **Required**. Your state, which triggers animation            |
-| `timeout`  | `number`                           | **Required**. How long before the animation ends and unmounts |
-| `mode`     | `default` \| `out-in` \| `int-out` | **Optional**. Default to `default` mode                       |
+| Parameters | Type                              | Description                                                   |
+| :--------- | :-------------------------------- | :------------------------------------------------------------ |
+| `state`    | `any`                             | **Required**. Your state, which triggers animation            |
+| `timeout`  | `number`                          | **Required**. How long before the animation ends and unmounts |
+| `mode`     | `default` \| `out-in` \| `in-out` | **Optional**. Default to `default` mode                       |
 
 ### Transition
 
 ```jsx
   <Transition state={onOff} timeout={300}>
-    {(stage, shouldMount) => shouldMount && <div style={...}>hello</div>}
+    {(stage, shouldMount) => shouldMount && <div style={{...}}>hello</div>}
   </Transition>
 ```
 
@@ -182,6 +207,21 @@ return <div>
 | `state`    | `boolean`                                               | **Required**. Your boolean state, which controls animation in and out |
 | `timeout`  | `number`                                                | **Required**. How long before the animation ends and unmounts         |
 | `children` | `(stage: Stage, shouldMount: boolean)=>React.ReactNode` | **Required**. FaCC pattern.                                           |
+
+### SwitchTransition
+
+```jsx
+  <SwitchTransition state={count} timeout={300}>
+    {(state, stage) => <div style={{...}}>{state} hello</div>}
+  </SwitchTransition>
+```
+
+| Props      | Type                                          | Description                                                           |
+| :--------- | :-------------------------------------------- | :-------------------------------------------------------------------- |
+| `state`    | `any`                                         | **Required**. Your boolean state, which controls animation in and out |
+| `timeout`  | `number`                                      | **Required**. How long before the animation ends and unmounts         |
+| `mode`     | `default` \| `out-in` \| `in-out`             | **Optional**. Default to `default` mode                               |
+| `children` | `(state: any, stage: Stage)=>React.ReactNode` | **Required**. FaCC pattern.                                           |
 
 ## License
 
