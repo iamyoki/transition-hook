@@ -34,13 +34,16 @@
 
 <p align="center">
   <a href="https://o3f41.csb.app/basic">
-    <img src="./gifs/basic.gif" height="150" alt="example">
+    <img src="./gifs/basic.gif" height="120" alt="example">
+  </a>
+  <a href="https://o3f41.csb.app/painter">
+    <img src="./gifs/painter.gif" height="120" alt="example">
   </a>
   <a href="https://o3f41.csb.app/basic-switch-transition">
-    <img src="./gifs/basic-switch-transition.gif" height="150" alt="example">
+    <img src="./gifs/basic-switch-transition.gif" height="120" alt="example">
   </a>
   <a href="https://o3f41.csb.app/transition-with-key">
-    <img src="./gifs/transition-with-key.gif" height="150" alt="example">
+    <img src="./gifs/transition-with-key.gif" height="120" alt="example">
   </a>
 </p>
 
