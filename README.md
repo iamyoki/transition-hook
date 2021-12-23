@@ -11,7 +11,7 @@
   </a>
 </p>
 
-<p align="center">An extreme light-weight<strong>(0.4kb)</strong> react transition animation hook which is simpler and easier to use than <a href="http://reactcommunity.org/react-transition-group">react-transition-group</a></p>
+<p align="center">An extremely light-weight<strong>(1kb)</strong> react transition animation hook which is simpler and easier to use than <a href="https://github.com/reactjs/react-transition-group" target="_blank">react-transition-group</a></p>
 <br>
 
 <p align="center">
@@ -160,7 +160,7 @@ return <div>
 ### useSwitchTransition(state, timeout, mode)
 
 ```js
-  const transition = useSwitchTransition(onOff, 300, default)
+  const transition = useSwitchTransition(onOff, 300, 'default')
 ```
 
 | Parameters | Type                               | Description                                                   |
