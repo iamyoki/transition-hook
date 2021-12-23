@@ -1,3 +1,15 @@
+## [1.3.0](https://github.com/iamyoki/transition-hook/compare/v1.2.1...v1.3.0) (2021-12-23)
+
+
+### Features
+
+* add SwitchTransition, update docs ([18b08e9](https://github.com/iamyoki/transition-hook/commit/18b08e9682e19a40b0b5648aebb3fe52ba9210cd))
+
+
+### Docs
+
+* update docs ([2e7039d](https://github.com/iamyoki/transition-hook/commit/2e7039d06d353f2449f587016a5db4196ad3a380))
+
 ### [1.2.1](https://github.com/iamyoki/transition-hook/compare/v1.2.0...v1.2.1) (2021-12-22)
 
 
