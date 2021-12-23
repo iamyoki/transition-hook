@@ -1,3 +1,10 @@
+### [1.3.1](https://github.com/iamyoki/transition-hook/compare/v1.3.0...v1.3.1) (2021-12-23)
+
+
+### Docs
+
+* add ripple-effect gif example ([eb707d6](https://github.com/iamyoki/transition-hook/commit/eb707d6cade6787467349fe7c9b4c6f69d347377))
+
 ## [1.3.0](https://github.com/iamyoki/transition-hook/compare/v1.2.1...v1.3.0) (2021-12-23)
 
 
