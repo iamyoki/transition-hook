@@ -1,18 +1,24 @@
 import {Fragment, useEffect, useState} from 'react';
 import {Stage} from '..';
+import {insertArray} from '../helpers/insertArray';
 import {setAnimationFrameTimeout} from '../helpers/setAnimationFrameTimeout';
 
 type RenderCallback<Item> = (item: Item, stage: Stage) => React.ReactNode;
 
-type ListItem<Item> = {
+type ItemWithState<Item> = {
   item: Item;
   key: number;
   stage: Stage;
 };
 
+type ItemWithKey<Item> = {
+  item: Item;
+  index: number;
+};
+
 export function useTransitionGroup<Item>(list: Array<Item>, timeout: number) {
   // change list to our list form with extra information.
-  const initialList: Array<ListItem<Item>> = list.map((item, key) => ({
+  const initialList: Array<ItemWithState<Item>> = list.map((item, key) => ({
     item,
     key,
     stage: 'enter',
@@ -22,17 +28,32 @@ export function useTransitionGroup<Item>(list: Array<Item>, timeout: number) {
 
   useEffect(
     function handleListChange() {
-      // add new item
-      if (list.length > listState.length) {
-        const newItems: Array<ListItem<Item>> = list
-          .filter((item) => !listState.some((item2) => item2.item === item))
-          .map((item, index) => ({
-            item,
-            key: index + listState.length,
-            stage: 'from',
-          }));
+      let newItemsWithIndex: Array<ItemWithKey<Item>> = [];
 
-        setListState((prev) => prev.concat(newItems));
+      list.forEach((item, index) => {
+        if (listState.every((itemState) => itemState.item !== item)) {
+          newItemsWithIndex.push({item, index});
+        }
+      });
+
+      // 1 add new items into list state
+      if (newItemsWithIndex.length > 0) {
+        setListState((prevListState) => {
+          return newItemsWithIndex.reduce((prev, {item, index}, i) => {
+            return insertArray(prev, index, {
+              item,
+              key: prevListState.length + 1 + i,
+              stage: 'from',
+            });
+          }, prevListState);
+        });
+      }
+
+      // 2 enter those new items immediatly
+      if (
+        newItemsWithIndex.length === 0 &&
+        listState.some((item) => item.stage === 'from')
+      ) {
         setAnimationFrameTimeout(() => {
           setListState((prev) =>
             prev.map((item) => ({
@@ -43,22 +64,30 @@ export function useTransitionGroup<Item>(list: Array<Item>, timeout: number) {
         });
       }
 
-      // remove item
-      if (list.length < listState.length) {
-        const removeItems = listState.filter(
-          (item) => !list.includes(item.item)
-        );
+      // 3 leave items from list state
+      const subtractItemStates = listState.filter(
+        (itemState) =>
+          !list.includes(itemState.item) && itemState.stage !== 'leave'
+      );
+      const subtractItems = subtractItemStates.map((item) => item.item);
+
+      if (newItemsWithIndex.length === 0 && subtractItemStates.length > 0) {
         setListState((prev) =>
-          prev.map((item) =>
-            removeItems.includes(item) ? {...item, stage: 'leave'} : item
+          prev.map((itemState) =>
+            subtractItemStates.includes(itemState)
+              ? {...itemState, stage: 'leave'}
+              : itemState
           )
         );
+
         setAnimationFrameTimeout(() => {
           setListState((prev) =>
-            prev.filter((item) => !removeItems.includes(item))
+            prev.filter((item) => !subtractItems.includes(item.item))
           );
         }, timeout);
       }
+
+      console.log(listState);
     },
     [list, listState, timeout]
   );
