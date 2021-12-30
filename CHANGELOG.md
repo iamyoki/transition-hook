@@ -1,3 +1,11 @@
+## [1.5.0](https://github.com/iamyoki/transition-hook/compare/v1.4.0...v1.5.0) (2021-12-30)
+
+
+### Features
+
+* add ListTransition, close [#7](https://github.com/iamyoki/transition-hook/issues/7) ([e5f77b1](https://github.com/iamyoki/transition-hook/commit/e5f77b1a430b2511385696e45e8a4be41d31f627))
+* export ListTransition ([1801781](https://github.com/iamyoki/transition-hook/commit/1801781b566c7327574bde3baf77f2990ac75783))
+
 ## [1.4.0](https://github.com/iamyoki/transition-hook/compare/v1.3.3...v1.4.0) (2021-12-30)
 
 
