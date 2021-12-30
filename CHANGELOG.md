@@ -1,3 +1,12 @@
+## [1.4.0](https://github.com/iamyoki/transition-hook/compare/v1.3.3...v1.4.0) (2021-12-30)
+
+
+### Features
+
+* finished useListTransition(useTransitionGroup) ([1289cff](https://github.com/iamyoki/transition-hook/commit/1289cff43cb9cb2dfed7363a8215212da2c2e44f))
+* init useTransitionGroup (not finished) ([77da14d](https://github.com/iamyoki/transition-hook/commit/77da14d7c3311ac12103bd5e4c3e8a09c137de26))
+* unfinished useTransitionGroup ([d2fb662](https://github.com/iamyoki/transition-hook/commit/d2fb662ffa2f677c2a80e38a5dfd2121342f37f9))
+
 ### [1.3.3](https://github.com/iamyoki/transition-hook/compare/v1.3.2...v1.3.3) (2021-12-24)
 
 
