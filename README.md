@@ -62,13 +62,17 @@
 - [Usage](#usage)
   - [useTransition](#usetransition)
   - [useSwitchTransition](#useswitchtransition)
+  - [useListTransition](#uselisttransition)
   - [Transition](#transition)
   - [SwitchTransition](#switchtransition)
+  - [ListTransition](#listtransition)
 - [API Reference](#api-reference)
   - [useTransition(state, timeout)](#usetransitionstate-timeout)
   - [useSwitchTransition(state, timeout, mode)](#useswitchtransitionstate-timeout-mode)
+  - [useListTransition(state, timeout)](#uselisttransitionstate-timeout)
   - [Transition](#transition-1)
   - [SwitchTransition](#switchtransition-1)
+  - [ListTransition](#listtransition-1)
 - [License](#license)
 
 ## Installation
@@ -89,7 +93,7 @@ npm install transition-hook --save
 
 ### useTransition
 
-This hook transforms a boolean state into transition stage('from' | 'enter' | 'leave'), and unmount the component after timeout.
+This hook transforms a boolean state into transition stage: 'from' | 'enter' | 'leave', and unmount the component after timeout.
 
 ```jsx
 const [onOff, setOnOff] = useState(true)
@@ -110,7 +114,8 @@ return <div>
 
 ### useSwitchTransition
 
-This hook transforms when the state changes.
+This hook takes in a state, and animates when the state changes.
+>Note: Only animates when state changes.
 
 ```jsx
 const [count, setCount] = useState(0)
@@ -130,6 +135,34 @@ return <div>
     }}>{state}</p>
   ))}
 </div>
+```
+
+### useListTransition
+
+This hook takes in an array state, and animates when adding or removing items.
+>Note: Make sure each item is the unique one.
+
+```jsx
+const [list, setList] = useState([1, 2, 3])
+  const transitionGroup = useTransitionGroup(list, 300) // (state, timeout)
+
+  return (
+    <div>
+      <button onClick={()=>setList(prev=>[...prev, prev.length+1])}>Add Item</button>
+
+      {transitionGroup((item, stage) => (
+        <h1 style={{
+          transition: '.3s',
+          opacity: stage === 'enter' ? 1 : 0,
+          transform: {
+            from: 'translateX(-100%)',
+            enter: 'translateX(0%)',
+            leave: 'translateX(100%)',
+          }[stage]
+        }}>{item}</h1>
+      ))}
+    </div>
+  )
 ```
 
 ### Transition
@@ -160,7 +193,7 @@ FaCC pattern version of useSwitchTransition
 
 ```jsx
   <SwitchTransition state={count} timeout={300} mode='default'>
-    {(state, stage) => (
+    {(item, stage) => (
       <h1
         style={{
           transition: '.3s',
@@ -171,10 +204,33 @@ FaCC pattern version of useSwitchTransition
             leave: 'translateX(100%) scale(0)'
           }[stage]
         }}>
-        {state} {stage} hello
+        {item} {stage} hello
       </h1>
     )}
   </SwitchTransition>
+```
+
+### ListTransition
+
+FaCC pattern version of useListTransition
+
+```jsx
+  <ListTransition list={list} timeout={300}>
+    {(item, stage) => (
+      <h1
+        style={{
+          transition: '.3s',
+          opacity: stage === 'enter' ? 1 : 0,
+          transform: {
+            from: 'translateX(-100%) scale(1.2)',
+            enter: 'translateX(0)',
+            leave: 'translateX(100%) scale(0)'
+          }[stage]
+        }}>
+        {item} {stage} hello
+      </h1>
+    )}
+  </ListTransition>
 ```
 
 ## API Reference
@@ -209,6 +265,17 @@ FaCC pattern version of useSwitchTransition
 | `timeout`  | `number`                          | **Required**. How long before the animation ends and unmounts |
 | `mode`     | `default` \| `out-in` \| `in-out` | **Optional**. Default to `default` mode                       |
 
+### useListTransition(state, timeout)
+
+```js
+  const transition = useListTransition(list, 300)
+```
+
+| Parameters | Type         | Description                                                   |
+| :--------- | :----------- | :------------------------------------------------------------ |
+| `list`     | `Array<any>` | **Required**. Your array state                                |
+| `timeout`  | `number`     | **Required**. How long before the animation ends and unmounts |
+
 ### Transition
 
 ```jsx
@@ -237,6 +304,20 @@ FaCC pattern version of useSwitchTransition
 | `timeout`  | `number`                                      | **Required**. How long before the animation ends and unmounts         |
 | `mode`     | `default` \| `out-in` \| `in-out`             | **Optional**. Default to `default` mode                               |
 | `children` | `(state: any, stage: Stage)=>React.ReactNode` | **Required**. FaCC pattern.                                           |
+
+### ListTransition
+
+```jsx
+  <ListTransition list={list} timeout={300}>
+    {(item, stage)=><h1 style={...}>{item}</h1>}
+  </ListTransition>
+```
+
+| Props      | Type                                         | Description                                                   |
+| :--------- | :------------------------------------------- | :------------------------------------------------------------ |
+| `list`     | `Array<any>`                                 | **Required**. Your array state                                |
+| `timeout`  | `number`                                     | **Required**. How long before the animation ends and unmounts |
+| `children` | `(item: any, stage: Stage)=>React.ReactNode` | **Required**. FaCC pattern.                                   |
 
 ## License
 
