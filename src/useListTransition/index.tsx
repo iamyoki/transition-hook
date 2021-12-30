@@ -1,4 +1,4 @@
-import {Fragment, useEffect, useState} from 'react';
+import {Fragment, useEffect, useRef, useState} from 'react';
 import {Stage} from '..';
 import {insertArray} from '../helpers/insertArray';
 import {setAnimationFrameTimeout} from '../helpers/setAnimationFrameTimeout';
@@ -16,11 +16,12 @@ type ItemWithKey<Item> = {
   index: number;
 };
 
-export function useTransitionGroup<Item>(list: Array<Item>, timeout: number) {
+export function useListTransition<Item>(list: Array<Item>, timeout: number) {
+  const keyRef = useRef(0);
   // change list to our list form with extra information.
   const initialList: Array<ItemWithState<Item>> = list.map((item, key) => ({
     item,
-    key,
+    key: keyRef.current,
     stage: 'enter',
   }));
 
@@ -38,15 +39,18 @@ export function useTransitionGroup<Item>(list: Array<Item>, timeout: number) {
 
       // 1 add new items into list state
       if (newItemsWithIndex.length > 0) {
-        setListState((prevListState) => {
-          return newItemsWithIndex.reduce((prev, {item, index}, i) => {
-            return insertArray(prev, index, {
-              item,
-              key: prevListState.length + 1 + i,
-              stage: 'from',
-            });
-          }, prevListState);
-        });
+        keyRef.current++;
+        setListState((prevListState) =>
+          newItemsWithIndex.reduce(
+            (prev, {item, index}, i) =>
+              insertArray(prev, index, {
+                item,
+                key: keyRef.current,
+                stage: 'from',
+              }),
+            prevListState
+          )
+        );
       }
 
       // 2 enter those new items immediatly
@@ -86,8 +90,6 @@ export function useTransitionGroup<Item>(list: Array<Item>, timeout: number) {
           );
         }, timeout);
       }
-
-      console.log(listState);
     },
     [list, listState, timeout]
   );
