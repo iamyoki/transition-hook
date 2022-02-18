@@ -73,6 +73,7 @@
   - [Transition](#transition-1)
   - [SwitchTransition](#switchtransition-1)
   - [ListTransition](#listtransition-1)
+- [Also see these amazing hooks](#also-see-these-amazing-hooks)
 - [License](#license)
 
 ## Installation
@@ -318,6 +319,13 @@ FaCC pattern version of useListTransition
 | `list`     | `Array<any>`                                 | **Required**. Your array state                                |
 | `timeout`  | `number`                                     | **Required**. How long before the animation ends and unmounts |
 | `children` | `(item: any, stage: Stage)=>React.ReactNode` | **Required**. FaCC pattern.                                   |
+
+## Also see these amazing hooks
+
+| Repo                                                                      | Intro                                                     |
+| :------------------------------------------------------------------------ | :-------------------------------------------------------- |
+| [🧻 infinite-scroll-hook](https://github.com/iamyoki/infinite-scroll-hook) | Scroll down to load more never been so easy!              |
+| [☄️ transition-hook](https://github.com/iamyoki/transition-hook)           | An extremely light-weight react transition animation hook |
 
 ## License
 
