@@ -1,4 +1,5 @@
 import {useEffect, useRef} from 'react';
+
 import {
   Canceller,
   clearAnimationFrameTimeout,
@@ -48,8 +49,7 @@ export function useInOutMode<S>({
     if (
       lastItem.state === state &&
       lastItem.stage === 'enter' &&
-      secondLastItem &&
-      secondLastItem?.stage === 'enter'
+      secondLastItem.stage === 'enter'
     ) {
       // 3 leave second last item after new item enter animation ends
       clearAnimationFrameTimeout(timerRef.current);
@@ -61,7 +61,7 @@ export function useInOutMode<S>({
     // if second last item exist
     // && second last item is enter
     // (unmount second last item)
-    if (secondLastItem && secondLastItem.stage === 'leave') {
+    if (secondLastItem.stage === 'leave') {
       // 4 unmount second last item after it's leave animation ends
       clearAnimationFrameTimeout(timerRef2.current);
       timerRef2.current = setAnimationFrameTimeout(() => {

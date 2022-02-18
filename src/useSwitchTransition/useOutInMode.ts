@@ -1,4 +1,5 @@
 import {useEffect, useRef} from 'react';
+
 import {
   Canceller,
   clearAnimationFrameTimeout,
@@ -46,6 +47,8 @@ export function useOutInMode<S>({
       });
     }
 
-    return () => clearAnimationFrameTimeout(timerRef.current);
+    return () => {
+      clearAnimationFrameTimeout(timerRef.current);
+    };
   }, [keyRef, list, mode, setList, state, timeout]);
 }

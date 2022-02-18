@@ -1,4 +1,5 @@
 import {useEffect} from 'react';
+
 import {ListItem, ModeHookParam} from './types';
 
 export function useDefaultMode<S>({

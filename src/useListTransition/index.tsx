@@ -1,4 +1,5 @@
 import {Fragment, useEffect, useRef, useState} from 'react';
+
 import {Stage} from '..';
 import {insertArray} from '../helpers/insertArray';
 import {setAnimationFrameTimeout} from '../helpers/setAnimationFrameTimeout';
@@ -29,7 +30,7 @@ export function useListTransition<Item>(list: Array<Item>, timeout: number) {
 
   useEffect(
     function handleListChange() {
-      let newItemsWithIndex: Array<ItemWithKey<Item>> = [];
+      const newItemsWithIndex: Array<ItemWithKey<Item>> = [];
 
       list.forEach((item, index) => {
         if (listState.every((itemState) => itemState.item !== item)) {

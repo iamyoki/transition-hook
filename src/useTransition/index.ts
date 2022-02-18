@@ -1,4 +1,5 @@
 import {useEffect, useRef, useState} from 'react';
+
 import {
   Canceller,
   clearAnimationFrameTimeout,
@@ -21,7 +22,7 @@ export function useTransition(state: boolean, timeout: number) {
 
       // when true - trans from to enter
       // when false - trans enter to leave, unmount after timeout
-      if (state === true) {
+      if (state) {
         setStage('from');
         setShouldMount(true);
         setAnimationFrameTimeout(() => {
@@ -34,7 +35,9 @@ export function useTransition(state: boolean, timeout: number) {
         }, timeout);
       }
 
-      return () => clearAnimationFrameTimeout(timer.current);
+      return () => {
+        clearAnimationFrameTimeout(timer.current);
+      };
     },
     [state, timeout]
   );

@@ -1,7 +1,7 @@
 import {Stage, useSwitchTransition} from '..';
 import {Mode} from '../useSwitchTransition/types';
 
-type SwitchTransitionProps<S = any> = {
+type SwitchTransitionProps<S> = {
   state: S;
   timeout: number;
   mode: Mode;

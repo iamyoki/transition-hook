@@ -3,7 +3,7 @@ export type Canceller = {
 };
 
 export function setAnimationFrameTimeout(
-  callback: Function,
+  callback: () => void,
   timeout: number = 0
 ) {
   const startTime = performance.now();
