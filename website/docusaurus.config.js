@@ -52,7 +52,7 @@ const config = {
         hideOnScroll: true,
         title: 'Transition Hook',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Transition Hook Logo',
           src: 'img/logo.png',
         },
         items: [
@@ -72,46 +72,53 @@ const config = {
       },
       footer: {
         style: 'light',
+        // logo: {
+        //   alt: 'Transition Hook Logo',
+        //   src: 'img/logo.png',
+        //   href: '#',
+        //   width: 40,
+        //   height: 40,
+        // },
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Get Started',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/transition-hook',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/transition-hook',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/transition-hook',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Tutorials',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/iamyoki/transition-hook',
-              },
-            ],
-          },
+          // {
+          //   title: 'Docs',
+          //   items: [
+          //     {
+          //       label: 'Get Started',
+          //       to: '/docs/intro',
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: 'Community',
+          //   items: [
+          //     {
+          //       label: 'Stack Overflow',
+          //       href: 'https://stackoverflow.com/questions/tagged/transition-hook',
+          //     },
+          //     {
+          //       label: 'Discord',
+          //       href: 'https://discordapp.com/invite/transition-hook',
+          //     },
+          //     {
+          //       label: 'Twitter',
+          //       href: 'https://twitter.com/transition-hook',
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: 'More',
+          //   items: [
+          //     {
+          //       label: 'Tutorials',
+          //       to: '/blog',
+          //     },
+          //     {
+          //       label: 'GitHub',
+          //       href: 'https://github.com/iamyoki/transition-hook',
+          //     },
+          //   ],
+          // },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/iamyoki">Yoki</a>.`,
       },
