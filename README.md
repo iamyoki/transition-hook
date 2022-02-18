@@ -69,6 +69,8 @@
   - [useSwitchTransition(state, timeout, mode)](#useswitchtransitionstate-timeout-mode)
   - [Transition](#transition-1)
   - [SwitchTransition](#switchtransition-1)
+  - [ListTransition](#listtransition)
+- [Also see these amazing hooks](#also-see-these-amazing-hooks)
 - [License](#license)
 
 ## Installation
@@ -237,6 +239,27 @@ FaCC pattern version of useSwitchTransition
 | `timeout`  | `number`                                      | **Required**. How long before the animation ends and unmounts         |
 | `mode`     | `default` \| `out-in` \| `in-out`             | **Optional**. Default to `default` mode                               |
 | `children` | `(state: any, stage: Stage)=>React.ReactNode` | **Required**. FaCC pattern.                                           |
+
+### ListTransition
+
+```jsx
+  <ListTransition list={list} timeout={300}>
+    {(item, stage)=><h1 style={...}>{item}</h1>}
+  </ListTransition>
+```
+
+| Props      | Type                                         | Description                                                   |
+| :--------- | :------------------------------------------- | :------------------------------------------------------------ |
+| `list`     | `Array<any>`                                 | **Required**. Your array state                                |
+| `timeout`  | `number`                                     | **Required**. How long before the animation ends and unmounts |
+| `children` | `(item: any, stage: Stage)=>React.ReactNode` | **Required**. FaCC pattern.                                   |
+
+## Also see these amazing hooks
+
+| Repo                                                                      | Intro                                                     |
+| :------------------------------------------------------------------------ | :-------------------------------------------------------- |
+| [🧻 infinite-scroll-hook](https://github.com/iamyoki/infinite-scroll-hook) | Scroll down to load more never been so easy!              |
+| [☄️ transition-hook](https://github.com/iamyoki/transition-hook)           | An extremely light-weight react transition animation hook |
 
 ## License
 
