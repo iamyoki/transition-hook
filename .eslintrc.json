@@ -1,8 +1,0 @@
-{
-  "extends": ["eslint:recommended", "react-app", "plugin:prettier/recommended"],
-  "settings": {
-    "react": {
-      "version": "latest"
-    }
-  }
-}
