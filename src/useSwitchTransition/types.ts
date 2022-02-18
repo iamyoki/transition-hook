@@ -8,7 +8,7 @@ export type ListItem<S> = {
   stage: Stage;
 };
 
-export type ModeHookParam<S = any> = {
+export type ModeHookParam<S> = {
   state: S;
   timeout: number;
   mode?: Mode;
