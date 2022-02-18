@@ -1,3 +1,20 @@
+### [1.5.1](https://github.com/iamyoki/transition-hook/compare/v1.5.0...v1.5.1) (2022-02-18)
+
+
+### Docs
+
+* update readme ([2ea9645](https://github.com/iamyoki/transition-hook/commit/2ea9645f205135ed6ed5eea24daf0fc2c4749511))
+
+
+### Refactors
+
+* config files, add qhlab eslint plugin ([f204db4](https://github.com/iamyoki/transition-hook/commit/f204db427c52aa08703abc2408e2b911edda650e))
+
+
+### Chores
+
+* lint fix ([02beb0e](https://github.com/iamyoki/transition-hook/commit/02beb0efc8911a9098df37fcb4fa984e6c0f00c1))
+
 ## [1.5.0](https://github.com/iamyoki/transition-hook/compare/v1.4.0...v1.5.0) (2021-12-30)
 
 
