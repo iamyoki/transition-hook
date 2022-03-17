@@ -30,7 +30,7 @@
     "🌟 --- Mains": "",
     "clean": "rimraf dist",
     "build": "yarn clean && run-p build:*",
-    "watch": "yarn clean && run-p 'build:* -- --watch'",
+    "dev": "yarn clean && run-p \"build:* --sourceMap --watch\"",
     "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "semantic-release": "semantic-release"
   },
