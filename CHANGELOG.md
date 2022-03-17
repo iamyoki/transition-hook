@@ -1,3 +1,10 @@
+### [1.5.2](https://github.com/iamyoki/transition-hook/compare/v1.5.1...v1.5.2) (2022-03-17)
+
+
+### Bug Fixes
+
+* sourmap warning in CRA [#11](https://github.com/iamyoki/transition-hook/issues/11) ([8a56d79](https://github.com/iamyoki/transition-hook/commit/8a56d796eb45140bb34a393ab92ff01cbcc17237))
+
 ### [1.5.1](https://github.com/iamyoki/transition-hook/compare/v1.5.0...v1.5.1) (2022-02-18)
 
 
