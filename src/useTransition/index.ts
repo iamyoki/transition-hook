@@ -25,7 +25,7 @@ export function useTransition(state: boolean, timeout: number) {
       if (state) {
         setStage('from');
         setShouldMount(true);
-        setAnimationFrameTimeout(() => {
+        timer.current = setAnimationFrameTimeout(() => {
           setStage('enter');
         });
       } else {
