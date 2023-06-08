@@ -3,7 +3,7 @@ node_js:
   - ""
 deploy:
   provider: npm
-  email: NPM_EMAIL
-  api_key: NPM_TOKEN
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_TOKEN"
   on:
     all_branches: true
